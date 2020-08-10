@@ -4,18 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class RestartLevelWithButton : MonoBehaviour
+public class RefreshLevel : MonoBehaviour
 {
-
-
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            RestartLevel();
-        }
+        this.GetComponent<Button>().onClick.AddListener(RestartLevel);
     }
+
 
     public void RestartLevel()
     {
